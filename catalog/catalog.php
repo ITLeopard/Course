@@ -25,15 +25,10 @@
 					</ul>
 				</nav>
 			</div>
-			<?php
-				if (!empty($_SESSION['login']) and !empty($_SESSION['id']))
-					echo"<a class='reg_link' href='../reg/exit.php'>Выйти из личного кабинета</a>";
-				else
-					echo"<a class='reg_link' href='../reg/index_reg.php'>Войти в личный кабинет покупателя</a>";
-            ?>
+            <a href="../reg/index_reg.php" class="reg_link">Личный кабинет покупателя</a>
 		</div>
 		<div class="content">
-			<h1 style="font-style: italic;">Каталог</h1>
+			<h1>Каталог</h1>
 
 			<div class="item">
 				<a href="eng_10.php" target="_blank"><img src="../img/eng_10.jpg" width="120" class="img"><br>Enjoy English. 10 класс</a>

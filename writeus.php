@@ -14,24 +14,19 @@
         <div class="header">
            <div>
                 <section class="logo" title="BS">
-                        <a href="index.html"> <img src="img/logo.jpg" alt="BS" hspace="5px"> BookShop </a>
+                        <a href="index.php"> <img src="img/logo.jpg" alt="BS" hspace="5px"> BookShop </a>
                 </section>
                 <!--a href="../index.html"><img src="../img/logo.jpg" alt="logo" hspace="5px"></a-->
                 <nav class="menu">
                         <ul>
-                            <li><a href="index.html">Главная</a></li>
-                            <li><a href="catalog/catalog.html">Каталог</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
-                            <li><a href="writeus.html">Обратная связь</a></li>
+                            <li><a href="index.php">Главная</a></li>
+                            <li><a href="catalog/catalog.php">Каталог</a></li>
+                            <li><a href="contacts.php">Контакты</a></li>
+                            <li><a href="writeus.php">Обратная связь</a></li>
                         </ul>
                 </nav>
-            </div>
-
-            <?php
-                    if (!empty($_SESSION['login']) and !empty($_SESSION['id']))
-                            echo"<a class='reg_link' href='exit.php'>Выйти из личного кабинета</a>";
-                    else echo"<a class='reg_link' href=''../reg/index_reg.php'>Войти в личный кабинет покупателя</a>";
-            ?>
+            </div>            
+            <a href="reg/index_reg.php" class="reg_link">Личный кабинет покупателя</a>
         </div>
         <div class="content">
             <h1>Напишите нам</h1>

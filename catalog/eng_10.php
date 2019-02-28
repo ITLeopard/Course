@@ -24,11 +24,7 @@
                     </ul>
                 </nav>
             </div>
-            <?php
-                if (!empty($_SESSION['login']) and !empty($_SESSION['id']))
-                        echo"<a class='reg_link' href='../reg/exit.php'>Выйти из личного кабинета</a>";
-                else echo"<a class='reg_link' href='../reg/index_reg.php'>Войти в личный кабинет покупателя</a>";
-            ?>
+            <a href="../reg/index_reg.php" class="reg_link">Личный кабинет покупателя</a>
         </div>
         <div class="content">
             <h1>Учебник по английскому языку Enjoy English. 10 класс</h1>

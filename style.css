@@ -1,15 +1,11 @@
-div{
-    display: block;
+body{
+    background: #f8f8f8;
 }
+
 .container{
     position: relative;
-    width: 100%;
-    /*height: 800px;
-    border: 1px solid red;*/
-
+    width: 95%;
     margin: 0 auto;
-
-    background: #f8f8f8;
 }
 
 .header{
@@ -24,11 +20,16 @@ div{
     float: left;
 }
 
+.header > div{
+    min-height: 100px;
+}
+
 .content{
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
+    min-height: 700px;
 }
 .content > p:first-letter{
     font-size: 30px;
@@ -257,4 +258,22 @@ textarea{
 }
 .item a:hover{
     outline: 3px solid darkgrey;
+}
+
+iframe{
+    min-height: 500px;
+    max-width: 1200px;
+    margin: 0 15% 0 15%;
+}
+
+.reg_link{
+    float: right;
+}
+.reg_link:hover{
+    font-style: italic;
+}
+
+.reg_form{
+    width: 15%;
+    margin: 70 auto
 }
