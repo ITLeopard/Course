@@ -1,0 +1,260 @@
+div{
+    display: block;
+}
+.container{
+    position: relative;
+    width: 100%;
+    /*height: 800px;
+    border: 1px solid red;*/
+
+    margin: 0 auto;
+
+    background: #f8f8f8;
+}
+
+.header{
+    width: 100%;
+    height: 110px;
+    padding-right: 0px;
+}
+
+.header > a img{
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+.content{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+.content > p:first-letter{
+    font-size: 30px;
+    font-style: italic;
+    color: darkblue;
+}
+
+.footer{
+    height: 30px;
+    background-color: cornsilk;
+    font-style: italic;
+    text-align: right;
+
+    padding: 20px 30px 0 0;
+}
+/*
+#BookShop{
+    font-style: italic;
+    font-size: 35px;
+    font-weight: 800;
+    color: darkslateblue;
+    text-decoration: none;
+}*/
+
+h1{
+    font-style: italic;
+    line-height: 45px;
+    font-size: 45px;
+}
+h2{
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+    overflow: hidden;
+}
+
+.har{
+    font-size: 16px;
+    text-align: left;
+    /*list-style-image: url(img/chackmark.jpg);*/
+}
+
+.menu{
+    /**margin: 1px;**/
+    float: right;
+
+}
+.menu>ul>li{
+    float: left;
+    /*margin: 5px 10px;*/
+    width: 260px;
+    height: 55px;
+    border: 1px solid black;
+    text-align: center;
+
+    font-style: italic;
+    font-size: 23px;
+    font-weight: bold;
+    outline: 1px solid antiquewhite;
+    background-color: antiquewhite;
+    line-height: 55px;
+}
+.menu>ul>li>a{
+    text-decoration: none;
+	display: block;
+}
+li{
+    display: list-item;
+    /*text-align: -webkit-match-parent;*/
+    text-align: center;
+}
+ul, ol{
+    list-style: none;
+}
+/*.menu > li{
+    width: 170px;
+    height: 55px;
+    border: 1px solid black;
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    float:right;
+
+    font-style: italic;
+    font-size: 23px;
+    font-weight: bold;
+    outline: 1px solid antiquewhite;
+    background-color: antiquewhite;
+
+    /*padding-right: 5px;
+    padding-left: 5px;
+}*/
+/*.menu>ul>li>a{
+    display: block;
+    height: 50px;
+    text-decoration: none;
+}*/
+.menu li:first-child{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.menu li:last-child{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.menu li a:hover{
+    /**color: blueviolet;**/
+    background-color: bisque;
+	font-style: normal;
+
+}
+/**.menu li a:hover:after{
+    content:" >>";
+    color: blueviolet;
+    font-size: 14px;
+}**/
+.menu li a:active{
+    color: navy;
+	background-color: antiquewhite;
+}
+/**.menu li a:active:after{
+    content:" >>";
+    color: navy;
+    font-size: 14px;
+}**/
+
+.table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center
+
+}
+.table td{
+    border: 1px solid black;
+    padding: 3px;
+
+}
+.table tr:first-child{
+    color: darkblue;
+    height: 40px;
+}
+
+.text{
+    width: 200px;
+    height: 20px;
+    font-size: 16px;
+    color: darkblue;
+    background-color: floralwhite;
+}
+.text{
+    text-transform: capitalize;
+}
+.text:focus{
+    background-color: antiquewhite;
+}
+textarea{
+    width: 550px!important;
+    height: 200px!important;
+}
+
+.logo{
+    margin: 10px 10px;
+    float: left;
+}
+.logo a{
+    font-style: italic;
+    font-size: 35px;
+    font-weight: 800;
+    color: darkslateblue;
+    text-decoration: none;
+}
+
+.bookimg{
+    outline: 1px solid darkgrey;
+    float: left;
+    margin: 0px 30px 20px 5px;
+}
+.bookimg:hover{
+    outline: 0px;
+}
+
+.buy{
+    /*position: absolute;
+    top: 220px;
+    right: 0px;*/
+
+    width: 250px;
+    height: 70px;
+    font-size: 30px;
+    background-color: burlywood;
+
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 30px;
+
+    cursor: pointer;
+
+    margin: 50px 70px;
+}
+.buy:hover{
+    font-style: italic;
+}
+.buy:active{
+    font-style: italic;
+    background-color: darkgoldenrod;
+}
+
+.item{
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    outline: 2px solid grey;
+    width: 300px;
+    text-align: center;
+    vertical-align:middle;
+}
+.item a{
+    display: block;
+	width: 300px;
+	height: 200px;
+    padding-top: 30px;
+    padding-bottom: 70px;
+	text-decoration: none;
+}
+.item a:hover{
+    outline: 3px solid darkgrey;
+}
