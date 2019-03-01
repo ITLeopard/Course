@@ -48,7 +48,7 @@
 		if ($myrow['password']==$password) {
 			$_SESSION['login']=$myrow['login'];
 			$_SESSION['id']=$myrow['id'];
-			echo "Вы успешно вошли на сайт! <a href='index.php'>Главная страница</a>";
+			echo "Вы успешно вошли на сайт! <script>window.locate.assign('../catalog/catalog.php');</script>";
     	}
  		else {
     		exit ("Извините, введённый вами login или пароль неверный.");

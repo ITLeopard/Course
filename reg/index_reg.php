@@ -2,16 +2,18 @@
     session_start();
 ?>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="icon" href="../img/logo.ico">
 </head>
+
 <body>
-	<div class="container">
+    <div class="container">
         <div class="header">
-           <div>
+            <div>
                 <section class="logo" title="BS">
                     <a href="../index.php"> <img src="../img/logo.jpg" alt="BS" hspace="5px"> BookShop </a>
                 </section>
@@ -28,14 +30,14 @@
                     if (!empty($_SESSION['login']) and !empty($_SESSION['id']))
                         echo"<a class='reg_link' href='exit.php'>Выйти из личного кабинета</a>"
             ?-->
-	</div>
+        </div>
         <div class="content">
             <h1>Вход в личный кабинет покупателя</h1>
             <form action="testreg.php" method="post" class="reg_form">
-                    <p><label>Ваш логин:<br></label><input name="login" type="text" size="50" maxlength="30"></p>
-                    <p><label>Ваш пароль:<br></label><input name="password" type="password" size="50" maxlength="50"></p>
-                    <p><input type="submit" name="submit" value="Войти"></p>
-                    <p><br><a href="reg.php">Зарегистрироваться</a></p>
+                <p><label>Ваш логин:<br></label><input name="login" type="text" size="30" maxlength="30"></p>
+                <p><label>Ваш пароль:<br></label><input name="password" type="password" size="30" maxlength="50"></p>
+                <p><input type="submit" name="submit" class="submit" value="Войти"></p>
+                <p><br><a href="reg.php">Зарегистрироваться</a></p>
             </form>
         </div>
         <div class="footer">
@@ -63,9 +65,9 @@
     ?>
 
     <br><br><br>
-    <a href="index.php?exit=1">Выход</a>
+    <a href="index_reg.php?exit=1">Выход</a>
 
-   <?php
+    <?php
         if ($_GET['exit'] = 1){
             session_unset();
             session_destroy();
@@ -73,6 +75,6 @@
     ?>
 
 
-	</body>
+</body>
 
-	</html>
+</html>

@@ -23,6 +23,7 @@
                     </ul>
                 </nav>
             </div>
+            <a href="index_reg.php" class="reg_link">Войти в личный кабинет покупателя</a>
             <!--?php
                     if (!empty($_SESSION['login']) and !empty($_SESSION['id']))
                         echo"<a class='reg_link' href='exit.php'>Выйти из личного кабинета</a>"
@@ -31,9 +32,9 @@
         <div class="content">
             <h1>Регистрация</h1>
             <form action="save_user.php" method="post" class="reg_form">
-                <p><label>Ваш логин:<br></label><input name="login" type="text" size="15" maxlength="15"></p>
-                <p><label>Ваш пароль:<br></label><input name="password" type="password" size="15" maxlength="15"></p>
-                <p><input type="submit" name="submit" value="Зарегистрироваться"></p>
+                <p><label>Ваш логин:<br></label><input name="login" type="text" size="30" maxlength="30"></p>
+                <p><label>Ваш пароль:<br></label><input name="password" type="password" size="30" maxlength="50"></p>
+                <p><input type="submit" name="submit" class="submit" value="Зарегистрироваться"></p>
             </form>
         </div>
         <div class="footer">
