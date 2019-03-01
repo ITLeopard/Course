@@ -31,13 +31,13 @@
 			<h1>Каталог</h1>
 
 			<div class="item">
-				<a href="eng_10.php" target="_blank"><img src="../img/eng_10.jpg" width="120" class="img"><br>Enjoy English. 10 класс</a>
+				<a href="eng_10.php" target="_blank"><img src="../img/eng_10.jpg" width="120" height="170" class="img"><br>Enjoy English. 10 класс</a>
 			</div>
 			<div class="item">
-				<a href="FilJava.php" target="_blank"><img src="../img/FilJava.jpg" width="120" class="img"><br>Брюс Эккель. Философия Java</a>
+				<a href="FilJava.php" target="_blank"><img src="../img/FilJava.jpg" width="120" height="170" class="img"><br>Брюс Эккель. Философия Java</a>
 			</div>
 			<div class="item">
-				<a href="html.php" target="_blank"><img src="../img/html.jpg" width="120" class="img"><br>Е.Л. Полонская. Язык HTML. Самоучитель</a>
+				<a href="html.php" target="_blank"><img src="../img/html.jpg" width="120" height="170" class="img"><br>Е.Л. Полонская. Язык HTML. Самоучитель</a>
 			</div>
 		</div>
 		<div class="footer">

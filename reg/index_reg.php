@@ -32,8 +32,8 @@
         <div class="content">
             <h1>Вход в личный кабинет покупателя</h1>
             <form action="testreg.php" method="post" class="reg_form">
-                    <p><label>Ваш логин:<br></label><input name="login" type="text" size="15" maxlength="15"></p>
-                    <p><label>Ваш пароль:<br></label><input name="password" type="password" size="15" maxlength="15"></p>
+                    <p><label>Ваш логин:<br></label><input name="login" type="text" size="50" maxlength="30"></p>
+                    <p><label>Ваш пароль:<br></label><input name="password" type="password" size="50" maxlength="50"></p>
                     <p><input type="submit" name="submit" value="Войти"></p>
                     <p><br><a href="reg.php">Зарегистрироваться</a></p>
             </form>

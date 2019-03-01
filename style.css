@@ -56,7 +56,7 @@ body{
 
 h1{
     font-style: italic;
-    line-height: 45px;
+    line-height: 50px;
     font-size: 45px;
 }
 h2{
@@ -274,6 +274,8 @@ iframe{
 }
 
 .reg_form{
-    width: 15%;
-    margin: 70 auto
+    border-color: aqua;
+    border-width: thick;
+    min-width: 20%;
+    /margin: 70 auto;
 }
