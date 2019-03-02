@@ -1,6 +1,12 @@
 <?php
     session_start();
+
+    if ($_GET['exit'] = 1){
+        session_unset();
+        session_destroy();
+    }
 ?>
+
 <html>
 
 <head>
@@ -67,12 +73,7 @@
     <br><br><br>
     <a href="index_reg.php?exit=1">Выход</a>
 
-    <?php
-        if ($_GET['exit'] = 1){
-            session_unset();
-            session_destroy();
-        }
-    ?>
+
 
 
 </body>

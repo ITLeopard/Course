@@ -20,7 +20,7 @@
 	//если пользователь не ввел логин или пароль, то выдаем ошибку и останавливаем скрипт
 	if (empty($login) or empty($password))
     {
-    	exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
+    	exit ("<script>alert('Заполните все поля!'); window.location='index_reg.php';</script>");
     }
 
 	//если логин и пароль введены,то обрабатываем их, чтобы теги и скрипты не работали, мало ли что люди могут ввести
@@ -42,16 +42,18 @@
     if (empty($myrow['password']))
     {
     	//если пользователя с введенным логином не существует
-    	exit ("Извините, введённый вами login или пароль неверный.");
+    	//exit ("Извините, введённый вами login или пароль неверный.");
+        exit ("<script>alert('Неверный логин или пароль'); window.location='index_reg.php';</script>");
     }
     else {
 		if ($myrow['password']==$password) {
 			$_SESSION['login']=$myrow['login'];
 			$_SESSION['id']=$myrow['id'];
-			echo "Вы успешно вошли на сайт! <script>window.locate.assign('../catalog/catalog.php');</script>";
+			echo "<script>alert('Вы успешно вошли на сайт!'); window.location='../catalog/catalog.php';</script>";
     	}
  		else {
-    		exit ("Извините, введённый вами login или пароль неверный.");
+    		//exit ("Извините, введённый вами login или пароль неверный.");
+            exit ("<script>alert('Неверный логин или пароль'); window.location='index_reg.php';</script>");
 		}
     }
 
