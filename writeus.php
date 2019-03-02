@@ -1,5 +1,10 @@
 <?php
     session_start();
+
+    /*if ($_GET['exit'] == 1){
+        session_unset();
+        session_destroy();
+    }*/
 ?>
 
 <!DOCTYPE html>
@@ -31,9 +36,9 @@
 
             <?php
                     if (!empty($_SESSION['login']) and !empty($_SESSION['id']))
-                            echo"<a class='reg_link' href='reg/index_reg.php?exit=1'>Выйти из личного кабинета</a>";
+                            echo"<a class='reg_link' href=''>Личный кабинет покупателя</a>";
                     else{
-                        echo"<a class='reg_link' href='reg/index_reg.php'>Войти в личный кабинет покупателя</a>";
+                        echo"<a class='reg_link' href='reg/index_reg.php'>Личный кабинет покупателя</a>";
                     }
             ?>
         </div>

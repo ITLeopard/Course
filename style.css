@@ -235,6 +235,8 @@ iframe{
 
 .reg_link{
     float: right;
+    font-size: 20px;
+    text-decoration-skip-ink: none;
 }
 .reg_link:hover{
     font-style: italic;

@@ -1,10 +1,14 @@
 <?php
     session_start();
 
-    /*if ($_GET['exit'] == 1){
+    if ($_GET['exit'] == 1){
         session_unset();
         session_destroy();
-    }*/
+    }
+
+    if ( empty($_SESSION['login']) or empty($_SESSION['id']) ){
+        echo"<script>window.location = 'reg/index_reg.php'</script>";
+    }
 ?>
 
 
@@ -13,7 +17,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <title>Корзина</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="img/logo.ico">
 </head>
@@ -34,11 +38,32 @@
                     </ul>
                 </nav>
             </div>
-            <a href="buscket.php" class="reg_link">Личный кабинет покупателя</a>
+            <a href="reg/index_reg.php?exit=1" class="reg_link">Выход</a>
         </div>
         <div class="content">
-            <h1>Добро пожаловать!</h1>
-            <p>В нашем интернет-магазине Вы можете приобрести книгу на любой вкус.</p>
+            <h1>
+                <?php
+                    echo"Личный кабинет покупателя: ".$_SESSION['login'];
+                ?>
+            </h1>
+            <h2>Корзина</h2>
+
+<?php
+    // подключаемся к базе
+    include ("bd.php");
+
+    //извлекаем данные о товарах в корзине
+    $result = mysql_query("SELECT * FROM Buscket", $db); // WHERE Buscket.idUser=$_SESSION['id']
+    $myrow = mysql_fetch_array($result);
+
+    foreach($myrow as $item){
+        echo"<table align='center' border='1'><tr style='border-bottom: thick;'><td>№</td><td>Название</td></tr>";
+        echo $item."<br>";
+    }
+
+
+?>
+
         </div>
         <div class="footer">
             &copy; Все права защищены

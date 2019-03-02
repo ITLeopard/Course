@@ -1,9 +1,13 @@
 <?php
     session_start();
 
-    if ($_GET['exit'] = 1){
+    if ($_GET['exit'] == 1){
         session_unset();
         session_destroy();
+    }
+
+    if (!empty($_SESSION['login']) and !empty($_SESSION['id'])){
+        echo"<script>window.location = '../buscket.php'</script>";
     }
 ?>
 
@@ -32,10 +36,6 @@
                     </ul>
                 </nav>
             </div>
-            <!--?php
-                    if (!empty($_SESSION['login']) and !empty($_SESSION['id']))
-                        echo"<a class='reg_link' href='exit.php'>Выйти из личного кабинета</a>"
-            ?-->
         </div>
         <div class="content">
             <h1>Вход в личный кабинет покупателя</h1>
@@ -58,13 +58,11 @@
             // Проверяем, пусты ли переменные логина и id пользователя
             if (empty($_SESSION['login']) or empty($_SESSION['id']))
             {
-                    // Если пусты, то мы не выводим ссылку
-                    echo "Вы вошли на сайт, как гость<br><a href='#'>Эта ссылка  доступна только зарегистрированным пользователям</a>";
+                    echo "Вы вошли на сайт, как гость";
             }
             else
             {
-                    // Если не пусты, то мы выводим ссылку
-                    echo "Вы вошли на сайт, как ".$_SESSION['login']."<br><a  href='http://tvpavlovsk.sk6.ru/'>Эта ссылка доступна только  зарегистрированным пользователям</a>";
+                    echo "Вы вошли на сайт, как ".$_SESSION['login'];
             }
 
             $exit = 0;

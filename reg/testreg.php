@@ -49,10 +49,9 @@
 		if ($myrow['password']==$password) {
 			$_SESSION['login']=$myrow['login'];
 			$_SESSION['id']=$myrow['id'];
-			echo "<script>alert('Вы успешно вошли на сайт!'); window.location='../catalog/catalog.php';</script>";
+			echo "<script>alert('Вы успешно вошли на сайт!'); window.location='index_reg.php';</script>";
     	}
  		else {
-    		//exit ("Извините, введённый вами login или пароль неверный.");
             exit ("<script>alert('Неверный логин или пароль'); window.location='index_reg.php';</script>");
 		}
     }

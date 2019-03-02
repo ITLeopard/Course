@@ -6,6 +6,21 @@
     <title>English</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
 	<link rel="icon" href="../img/logo.ico" type="image/x-icon">
+	<script>
+        function Buy(){
+            <?php
+            // подключаемся к базе
+            include ("bd.php");
+            alert("One");
+
+            //выполняем запрос на добавление данных в БД
+            if(!mysql_query("INSERT INTO Buscket(idUser, name) VALUES (".$_SESSION['id'].", 'Учебник по английскому языку Enjoy English. 10 класс')",$db))
+                die(mysql_error());
+
+            alert('Книга добавлена в корзину');
+            ?>
+        }
+    </script>
 </head>
 
 <body>
@@ -32,7 +47,7 @@
             <h2>Описание товара</h2>
             <p class="short">Учебник по английскому языку
                 <br>
-                <button class="buy">Купить</button>
+                <button class="buy" onclick="Buy()">Купить</button>
 
                 <h2 style="clear: both">Характеристики товара</h2>
                 <table class="table">
