@@ -24,7 +24,7 @@
                     </ul>
                 </nav>
             </div>
-            <a href="../reg/index_reg.php" class="reg_link">Личный кабинет покупателя</a>
+            <a href="../buscket.php" class="reg_link">Личный кабинет покупателя</a>
         </div>
         <div class="content">
             <h1>Философия Java</h1>

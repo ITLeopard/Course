@@ -1,10 +1,5 @@
 <?php
     session_start();
-
-    /*if ($_GET['exit'] == 1){
-        session_unset();
-        session_destroy();
-    }*/
 ?>
 
 

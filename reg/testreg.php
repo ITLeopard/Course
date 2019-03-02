@@ -41,8 +41,6 @@
     $myrow = mysql_fetch_array($result);
     if (empty($myrow['password']))
     {
-    	//если пользователя с введенным логином не существует
-    	//exit ("Извините, введённый вами login или пароль неверный.");
         exit ("<script>alert('Неверный логин или пароль'); window.location='index_reg.php';</script>");
     }
     else {

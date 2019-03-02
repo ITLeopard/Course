@@ -24,10 +24,6 @@
                 </nav>
             </div>
             <a href="index_reg.php" class="reg_link">Войти в личный кабинет покупателя</a>
-            <!--?php
-                    if (!empty($_SESSION['login']) and !empty($_SESSION['id']))
-                        echo"<a class='reg_link' href='exit.php'>Выйти из личного кабинета</a>"
-            ?-->
         </div>
         <div class="content">
             <h1>Регистрация</h1>

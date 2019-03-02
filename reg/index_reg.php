@@ -51,29 +51,6 @@
         </div>
     </div>
 
-
-
-
-    <?php
-            // Проверяем, пусты ли переменные логина и id пользователя
-            if (empty($_SESSION['login']) or empty($_SESSION['id']))
-            {
-                    echo "Вы вошли на сайт, как гость";
-            }
-            else
-            {
-                    echo "Вы вошли на сайт, как ".$_SESSION['login'];
-            }
-
-            $exit = 0;
-    ?>
-
-    <br><br><br>
-    <a href="index_reg.php?exit=1">Выход</a>
-
-
-
-
 </body>
 
 </html>

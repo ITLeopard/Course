@@ -33,14 +33,7 @@
                         </ul>
                 </nav>
             </div>            
-
-            <?php
-                    if (!empty($_SESSION['login']) and !empty($_SESSION['id']))
-                            echo"<a class='reg_link' href=''>Личный кабинет покупателя</a>";
-                    else{
-                        echo"<a class='reg_link' href='reg/index_reg.php'>Личный кабинет покупателя</a>";
-                    }
-            ?>
+            <a class='reg_link' href='buscket.php'>Личный кабинет покупателя</a>
         </div>
         <div class="content">
             <h1>Напишите нам</h1>

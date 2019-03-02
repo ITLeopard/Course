@@ -47,23 +47,6 @@
                 ?>
             </h1>
             <h2>Корзина</h2>
-
-<?php
-    // подключаемся к базе
-    include ("bd.php");
-
-    //извлекаем данные о товарах в корзине
-    $result = mysql_query("SELECT * FROM Buscket", $db); // WHERE Buscket.idUser=$_SESSION['id']
-    $myrow = mysql_fetch_array($result);
-
-    foreach($myrow as $item){
-        echo"<table align='center' border='1'><tr style='border-bottom: thick;'><td>№</td><td>Название</td></tr>";
-        echo $item."<br>";
-    }
-
-
-?>
-
         </div>
         <div class="footer">
             &copy; Все права защищены
