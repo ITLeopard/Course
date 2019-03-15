@@ -1,10 +1,5 @@
 <?php
     session_start();
-
-    /*if ($_GET['exit'] == 1){
-        session_unset();
-        session_destroy();
-    }*/
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +28,13 @@
                         </ul>
                 </nav>
             </div>            
-            <a class='reg_link' href='buscket.php'>Личный кабинет покупателя</a>
+            <a class='reg_link' href='buscket.php'>
+                <?php
+                    if($_SESSION['login'] == 'admin')
+                        echo"Страница администратора";
+                    else echo"Личный кабинет покупателя"
+                ?>
+            </a>
         </div>
         <div class="content">
             <h1>Напишите нам</h1>

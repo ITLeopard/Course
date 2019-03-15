@@ -9,8 +9,7 @@
     if ( empty($_SESSION['login']) or empty($_SESSION['id']) ){
         echo"<script>window.location = 'reg/index_reg.php'</script>";
     }
-    if($_SESSION['login'] == 'admin')
-            echo"<script>window.location = 'admin.php'</script>";
+
 ?>
 
 
@@ -44,11 +43,32 @@
         </div>
         <div class="content">
             <h1>
-                <?php
-                    echo"Личный кабинет покупателя: ".$_SESSION['login'];
-                ?>
+                Администратор, добро пожаловать!
             </h1>
-            <h2>Корзина</h2>
+            <h2>Список всех зарегистрированных покупателей</h2>
+
+            <table border="1" cellspacing="0" style="border-color: #f0f0f0">
+                <tr>
+                    <th>Id</th>
+                    <th>Имя пользователя</th>
+                    <th>Пароль</th>
+                </tr>
+                <?php
+                    include ("reg/bd.php");
+
+                    $result = mysql_query("SELECT * FROM Users", $db);
+                    $rows = mysql_num_rows($result);
+
+                    for ($i = 0 ; $i < $rows ; ++$i)
+                    {
+                        $row = mysql_fetch_row($result);
+                        echo "<tr>";
+                            for ($j = 0 ; $j < 3 ; ++$j) echo "<td>$row[$j]</td>";
+                        echo "</tr>";
+                    }
+                ?>
+            </table>
+
         </div>
         <div class="footer">
             &copy; Все права защищены

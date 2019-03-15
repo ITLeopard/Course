@@ -7,7 +7,10 @@
     }
 
     if (!empty($_SESSION['login']) and !empty($_SESSION['id'])){
-        echo"<script>window.location = '../buscket.php'</script>";
+        //if($_SESSION['login'] == 'admin')
+        //    echo"<script>window.location = '../admin.php'</script>";
+        //else
+            echo"<script>window.location = '../buscket.php'</script>";
     }
 ?>
 

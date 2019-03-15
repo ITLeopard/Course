@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +28,13 @@
                     </ul>
                 </nav>
             </div>
-            <a href="../buscket.php" class="reg_link">Личный кабинет покупателя</a>
+            <a href="../buscket.php" class="reg_link">
+                <?php
+                    if($_SESSION['login'] == 'admin')
+                        echo"Страница администратора";
+                    else echo"Личный кабинет покупателя"
+                ?>
+            </a>
         </div>
         <div class="content">
             <h1>Философия Java</h1>

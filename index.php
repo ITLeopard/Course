@@ -5,6 +5,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    session_start();
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -29,7 +32,13 @@
                     </ul>
                 </nav>
             </div>
-            <a href="buscket.php" class="reg_link">Личный кабинет покупателя</a>
+            <a href="buscket.php" class="reg_link">
+                <?php
+                    if($_SESSION['login'] == 'admin')
+                        echo"Страница администратора";
+                    else echo"Личный кабинет покупателя"
+                ?>
+            </a>
         </div>
         <div class="content">
             <h1>Добро пожаловать!</h1>

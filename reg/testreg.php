@@ -47,7 +47,13 @@
 		if ($myrow['password']==$password) {
 			$_SESSION['login']=$myrow['login'];
 			$_SESSION['id']=$myrow['id'];
-			echo "<script>alert('Вы успешно вошли на сайт!'); window.location='index_reg.php';</script>";
+
+			//if($_SESSION['login'] != 'admin')
+                echo "<script>alert('Вы успешно вошли на сайт!'); window.location='index_reg.php';</script>";
+            //else{
+            //    $result = mysql_query("SELECT * FROM Users", $db);
+            //    echo "<script>alert('Вы успешно вошли на сайт!'); window.location='index_reg.php?result=$result';</script>";
+            //}
     	}
  		else {
             exit ("<script>alert('Неверный логин или пароль'); window.location='index_reg.php';</script>");
